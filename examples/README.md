@@ -1,48 +1,49 @@
-# Examples
+# Exempel
 
-This directory contains example outputs demonstrating how the agency's agents can be orchestrated together to tackle real-world tasks.
+Den här katalogen innehåller exempel på utdata som visar hur agenterna i The Agency kan samverka för att lösa verkliga uppgifter.
 
-## Why This Exists
+## Varför finns den här?
 
-The agency-agents repo defines dozens of specialized agents across engineering, design, marketing, product, support, spatial computing, and project management. But agent definitions alone don't show what happens when you **deploy them all at once** on a single mission.
+Det här repot definierar många specialiserade agenter inom engineering, design, marketing, product, support, spatial computing och project management. Men enbart agentdefinitioner visar inte hur det faktiskt ser ut i praktiken.
 
-These examples answer the question: *"What does it actually look like when the full agency collaborates?"*
+Dessa exempel besvarar frågan: *"Hur ser det egentligen ut när hela byrån arbetar tillsammans?"*
 
-## Contents
+## Innehåll
 
 ### [nexus-spatial-discovery.md](./nexus-spatial-discovery.md)
 
-**What:** A complete product discovery exercise where 8 agents worked in parallel to evaluate a software opportunity and produce a unified plan.
+**Vad:** En komplett produktupptäcktsövning där 8 agenter arbetade parallellt för att utvärdera en mjukvarumöjlighet och skapa en enhetlig plan.
 
-**The scenario:** Web research identified an opportunity at the intersection of AI agent orchestration and spatial computing. The entire agency was then deployed simultaneously to produce:
+**Scenariot:** Webbresearch identifierade en möjlighet i skärningspunkten mellan AI-agentorkestrering och spatial computing. Hela byrån användes sedan samtidigt för att producera:
 
-- Market validation and competitive analysis
-- Technical architecture (8-service system design with full SQL schema)
-- Brand strategy and visual identity
-- Go-to-market and growth plan
-- Customer support operations blueprint
-- UX research plan with personas and journey maps
-- 35-week project execution plan with 65 sprint tickets
-- Spatial interface architecture specification
+- Marknadsvalidering och konkurrensanalys
+- Teknisk arkitektur (8-tjänstsystemdesign med full SQL-skema)
+- Varumärkesstrategi och visuell identitet
+- Go-to-market- och tillväxtplan
+- Blueprint för supportverksamhet
+- UX-forskningsplan med personas och journey maps
+- 35-veckors projektplan med 65 sprint-tickets
+- Specifikation för spatial UI-arkitektur
 
-**Agents used:**
-| Agent | Role |
+**Agenter som användes:**
+| Agent | Roll |
 |-------|------|
-| Product Trend Researcher | Market validation, competitive landscape |
-| Backend Architect | System architecture, data model, API design |
-| Brand Guardian | Positioning, visual identity, naming |
-| Growth Hacker | GTM strategy, pricing, launch plan |
-| Support Responder | Support tiers, onboarding, community |
-| UX Researcher | Personas, journey maps, design principles |
-| Project Shepherd | Phase plan, sprints, risk register |
-| XR Interface Architect | Spatial UI specification |
+| Product Trend Researcher | Marknadsvalidering, konkurrenslandskap |
+| Backend Architect | Systemarkitektur, datamodell, API-design |
+| Brand Guardian | Positionering, visuell identitet, namngivning |
+| Growth Hacker | GTM-strategi, prissättning, lanseringsplan |
+| Support Responder | Supportnivåer, onboarding, community |
+| UX Researcher | Personor, journey maps, designprinciper |
+| Project Shepherd | Fasplan, sprintar, riskregister |
+| XR Interface Architect | Spatial UI-specifikation |
 
-**Key takeaway:** All 8 agents ran in parallel and produced coherent, cross-referencing plans without coordination overhead. The output demonstrates the agency's ability to go from "find an opportunity" to "here's the full blueprint" in a single session.
+**Huvudpoängen:** Alla 8 agenter kördes parallellt och producerade samstämmiga, korsrefererande planer utan koordinationskostnad. Utdatat visar agencyns förmåga att gå från "hitta en möjlighet" till "ha en användbar, genomförbar plan i ett enda möte".
 
-## Adding New Examples
+## Lägg till nya exempel
 
-If you run an interesting multi-agent exercise, consider adding it here. Good examples show:
+Om du kör ett intressant multi-agent-experiment, överväg att lägga till det här. Bra exempel visar:
 
-- Multiple agents collaborating on a shared objective
-- The breadth of the agency's capabilities
-- Real-world applicability of the agent definitions
+- Flera agenter som samarbetar mot ett gemensamt mål
+- Agencyns bredd av förmågor
+- Praktisk användbarhet i verkliga situationer
+

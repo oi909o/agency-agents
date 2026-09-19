@@ -1,92 +1,82 @@
-# 🤝 Contributing to The Agency
+# 🤝 Bidra till The Agency
 
-First off, thank you for considering contributing to The Agency! It's people like you who make this collection of AI agents better for everyone.
+Tack för att du funderar på att bidra till The Agency! Det är människor som du som gör den här samlingen av AI-agenter bättre för alla.
 
-## 📋 Table of Contents
+## 📋 Innehållsförteckning
 
-- [Code of Conduct](#code-of-conduct)
-- [How Can I Contribute?](#how-can-i-contribute)
-- [Agent Design Guidelines](#agent-design-guidelines)
-- [Pull Request Process](#pull-request-process)
-- [Style Guide](#style-guide)
-- [Community](#community)
-
----
-
-## 📜 Code of Conduct
-
-This project and everyone participating in it is governed by our Code of Conduct. By participating, you are expected to uphold this code:
-
-- **Be Respectful**: Treat everyone with respect. Healthy debate is encouraged, but personal attacks are not tolerated.
-- **Be Inclusive**: Welcome and support people of all backgrounds and identities.
-- **Be Collaborative**: What we create together is better than what we create alone.
-- **Be Professional**: Keep discussions focused on improving the agents and the community.
+- [Uppförandekod](#uppförandekod)
+- [Hur kan jag bidra?](#hur-kan-jag-bidra)
+- [Riktlinjer för agenter](#riktlinjer-för-agenter)
+- [Pull request-process](#pull-request-process)
+- [Stilguide](#stilguide)
+- [Gemenskap](#gemenskap)
 
 ---
 
-## 🎯 How Can I Contribute?
+## 📜 Uppförandekod
 
-### 1. Create a New Agent
+Det här projektet och alla som deltar i det styrs av vår uppförandekod. Genom att delta förväntas du följa den här koden:
 
-Have an idea for a specialized agent? Great! Here's how to add one:
+- **Var respektfull**: Behandla alla med respekt. Hälsosam debatt uppmuntras, men personangrepp tolereras inte.
+- **Var inkluderande**: Välkomna och stödja människor från alla bakgrunder och identiteter.
+- **Var samarbetsinriktad**: Det vi skapar tillsammans blir bättre än det vi skapar själva.
+- **Var professionell**: Håll diskussionerna fokuserade på att förbättra agenterna och gemenskapen.
 
-1. **Fork the repository**
-2. **Choose the appropriate division** — or propose a new one. Divisions are the
-   top-level agent directories (e.g. `engineering/`, `security/`, `gis/`, `marketing/`,
-   `finance/`…); browse them to find where your agent fits. The authoritative list —
-   with labels, icons, and colors — is [`divisions.json`](divisions.json) at the repo
-   root, so it's always current.
+---
 
-   > **Divisions are defined by `divisions.json`** (repo root) — the single source of
-   > truth for the division set, validated in CI by `scripts/check-divisions.sh`.
-   > **Proposing a new division** means: create the directory, add an entry to
-   > `divisions.json` (label/icon/color), and add it to `AGENT_DIRS` in both
-   > `scripts/convert.sh` and `scripts/lint-agents.sh`. The check fails the build
-   > unless all of these agree and the directory contains at least one agent file.
+## 🎯 Hur kan jag bidra?
+
+### 1. Skapa en ny agent
+
+Har du en idé för en specialiserad agent? Toppen! Så här lägger du till en:
+
+1. **Forka repositoryt**
+2. **Välj rätt division** — eller föreslå en ny. Divisioner är topnivå-katalogerna för agenter (t.ex. `engineering/`, `security/`, `gis/`, `marketing/`, `finance/`…); bläddra bland dem för att hitta var din agent passar. Den auktoritativa listan — med etiketter, ikoner och färger — finns i [`divisions.json`](divisions.json) i repo-ts roten, så att den alltid är aktuell.
+
+   > **Divisioner definieras i `divisions.json`** (repo-ts rot) — den enda källan till sanning för divisionsuppsättningen, validerad i CI av `scripts/check-divisions.sh`.
+   > **Att föreslå en ny division** innebär: skapa katalogen, lägg till en post i `divisions.json` (etikett/ikon/färg) och lägg den i `AGENT_DIRS` i både `scripts/convert.sh` och `scripts/lint-agents.sh`. Kontrollern misslyckas om det inte stämmer överens och katalogen inte innehåller minst en agentfil.
    >
-   > Note: `strategy/` (NEXUS playbooks/runbooks — no agent frontmatter) and
-   > `integrations/` (generated per-tool output from `convert.sh`) are **not**
-   > divisions and must never be added to the division lists.
+   > Observera: `strategy/` (NEXUS-playbooks/runbooks — utan frontmatter för agenter) och `integrations/` (genererats per verktyg från `convert.sh`) är **inte** divisioner och får aldrig läggas till i divisionslistorna.
 
-3. **Create your agent file** following the template below
-4. **Test your agent** in real scenarios
-5. **Submit a Pull Request** with your agent
+3. **Skapa din agentfil** enligt mallen nedan
+4. **Testa din agent** i verkliga scenarier
+5. **Skicka in en pull request** med din agent
 
-### 2. Improve Existing Agents
+### 2. Förbättra befintliga agenter
 
-Found a way to make an agent better? Contributions welcome:
+Har du hittat ett sätt att göra en agent bättre? Bidrag välkomnas:
 
-- Add real-world examples and use cases
-- Enhance code samples with modern patterns
-- Update workflows based on new best practices
-- Add success metrics and benchmarks
-- Fix typos, improve clarity, enhance documentation
+- Lägg till verkliga exempel och användningsfall
+- Förbättra kodexempel med moderna mönster
+- Uppdatera arbetsflöden baserat på nya bästa praxis
+- Lägg till framgångsmetoder och mätvärden
+- Rätta stavfel, förbättra tydlighet och dokumentation
 
-### 3. Share Success Stories
+### 3. Dela framgångshistorier
 
-Used these agents successfully? Share your story:
+Har du använt agenterna framgångsrikt? Dela din historia:
 
-- Post in [GitHub Discussions](https://github.com/msitarzewski/agency-agents/discussions)
-- Add a case study to the README
-- Write a blog post and link it
-- Create a video tutorial
+- Posta i [GitHub Discussions](https://github.com/msitarzewski/agency-agents/discussions)
+- Lägg till en fallstudie i README
+- Skriv en bloggpost och länka den
+- Skapa en videoguide
 
-### 4. Report Issues
+### 4. Rapportera problem
 
-Found a problem? Let us know:
+Hittade du ett problem? Låt oss veta:
 
-- Check if the issue already exists
-- Provide clear reproduction steps
-- Include context about your use case
-- Suggest potential solutions if you have ideas
+- Kontrollera om problemet redan finns
+- Ge tydliga reproduktionssteg
+- Inkludera kontext om ditt användningsfall
+- Föreslå möjliga lösningar om du har några idéer
 
 ---
 
-## 🎨 Agent Design Guidelines
+## 🎨 Riktlinjer för agenter
 
-### Agent File Structure
+### Agentfilens struktur
 
-Every agent should follow this structure:
+Varje agent bör följa denna struktur:
 
 ```markdown
 ---
@@ -154,190 +144,165 @@ Measurable outcomes:
 Advanced techniques and approaches the agent masters
 ```
 
-### Agent Structure
+### Agentstruktur
 
-Agent files are organized into two semantic groups that map to
-OpenClaw's workspace format and help other tools parse your agent:
+Agentfiler organiseras i två semantiska grupper som mappar till OpenClaw:s arbetsytformat och hjälper andra verktyg att analysera din agent:
 
-#### Persona (who the agent is)
-- **Identity & Memory** — role, personality, background
-- **Communication Style** — tone, voice, approach
-- **Critical Rules** — boundaries and constraints
+#### Persona (vem agenter är)
+- **Identity & Memory** — roll, personlighet, bakgrund
+- **Communication Style** — ton, röst, tillvägagångssätt
+- **Critical Rules** — gränser och begränsningar
 
-#### Operations (what the agent does)
-- **Core Mission** — primary responsibilities
-- **Technical Deliverables** — concrete outputs and templates
-- **Workflow Process** — step-by-step methodology
-- **Success Metrics** — measurable outcomes
-- **Advanced Capabilities** — specialized techniques
+#### Operations (vad agenter gör)
+- **Core Mission** — primära ansvar
+- **Technical Deliverables** — konkreta resultat och mallar
+- **Workflow Process** — steg-för-steg-metodik
+- **Success Metrics** — mätbara resultat
+- **Advanced Capabilities** — specialiserade tekniker
 
-No special formatting is required — just keep persona-related sections
-(identity, communication, rules) grouped separately from operational
-sections (mission, deliverables, workflow, metrics). The `convert.sh`
-script uses these section headers to automatically split agents into
-tool-specific formats.
+Ingen speciell formatering krävs — håll bara personrelaterade sektioner (identitet, kommunikation, regler) separata från operationella sektioner (uppdrag, leveranser, arbetsflöde, mätvärden). Skriptet `convert.sh` använder dessa rubriker för att automatiskt dela upp agenter i verktygsspecifika format.
 
-### Agent Design Principles
+### Principer för agentdesign
 
-1. **🎭 Strong Personality**
-   - Give the agent a distinct voice and character
-   - Not "I am a helpful assistant" - be specific and memorable
-   - Example: "I default to finding 3-5 issues and require visual proof" (Evidence Collector)
+1. **🎭 Stark personlighet**
+   - Ge agenterna en tydlig röst och karaktär
+   - Inte "Jag är en hjälpsam assistent" — vara specifik och minnesvärd
+   - Exempel: "Jag defaultar till att hitta 3–5 problem och kräver visuell bevisning" (Evidence Collector)
 
-2. **📋 Clear Deliverables**
-   - Provide concrete code examples
-   - Include templates and frameworks
-   - Show real outputs, not vague descriptions
+2. **📋 Klara leveranser**
+   - Ge konkreta kodexempel
+   - Inkludera mallar och ramverk
+   - Visa verkliga resultat, inte vaga beskrivningar
 
-3. **✅ Success Metrics**
-   - Include specific, measurable metrics
-   - Example: "Page load times under 3 seconds on 3G"
-   - Example: "10,000+ combined karma across accounts"
+3. **✅ Mätbara framgångsmetoder**
+   - Inkludera specifika, mätbara mål
+   - Exempel: "Sidladdningstid under 3 sekunder på 3G"
+   - Exempel: "10 000+ kombinerad karma över konton"
 
-4. **🔄 Proven Workflows**
-   - Step-by-step processes
-   - Real-world tested approaches
-   - Not theoretical - battle-tested
+4. **🔄 Beprövade arbetsflöden**
+   - Steg-för-steg-processer
+   - Verkligt testade tillvägagångssätt
+   - Inte teoretiska — beprövade i produktion
 
-5. **💡 Learning Memory**
-   - What patterns the agent recognizes
-   - How it improves over time
-   - What it remembers between sessions
+5. **💡 Lärande minne**
+   - Vilka mönster agenterna känner igen
+   - Hur de förbättras över tid
+   - Vad de minns mellan sessioner
 
-### External Services
+### Externa tjänster
 
-Agents may depend on external services (APIs, platforms, SaaS tools) when
-those services are essential to the agent's function. When they do:
+Agenter kan vara beroende av externa tjänster (API:er, plattformar, SaaS-verktyg) när dessa tjänster är avgörande för agentens funktion. När så är fallet:
 
-1. **Declare dependencies** in frontmatter using the `services` field
-2. **The agent must stand on its own** — strip the API calls and there
-   should still be a useful persona, workflow, and expertise underneath
-3. **Don't duplicate vendor docs** — reference them, don't reproduce them.
-   The agent file should read like an agent, not a getting-started guide
-4. **Prefer services with free tiers** so contributors can test the agent
+1. **Deklarera beroenden** i frontmatter med `services`-fältet
+2. **Agenterna måste fungera på egen hand** — ta bort API-anropen och det bör fortfarande finnas en användbar personlighet, arbetsflöde och expertis under ytan
+3. **Duplicera inte leverantörers dokumentation** — hänvisa till den, reproducera den inte. Agentfilen ska läsa som en agent, inte som en snabbstartsguide
+4. **Föredra tjänster med gratisnivåer** så att bidragsgivare kan testa agenterna
 
-The test: *is this agent for the user, or for the vendor?* An agent that
-solves the user's problem using a service belongs here. A service's
-quickstart guide wearing an agent costume does not.
+Testet: *är den här agenter för användaren, eller för leverantören?* En agent som löser användarens problem med hjälp av en tjänst hör hit. En tjänsts snabbstartsguide klädd som en agent gör inte det.
 
-### Tool-Specific Compatibility
+### Kompatibilitet med specifika verktyg
 
-**Qwen Code Compatibility**: Agent bodies support `${variable}` templating for dynamic context (e.g., `${project_name}`, `${task_description}`). Qwen SubAgents use minimal frontmatter: only `name` and `description` are required; `color`, `emoji`, and `version` fields are omitted as Qwen doesn't use them.
+**Qwen Code-kompatibilitet**: Agentkroppar stöder `${variable}`-mallar för dynamisk kontext (t.ex. `${project_name}`, `${task_description}`). Qwen SubAgents använder minimalt frontmatter: endast `name`, `description`, `model` och `tools` om det behövs.
 
-**Codex Compatibility**: Codex custom agents are generated as standalone TOML files. The Codex integration keeps a minimal 1:1 mapping: `name` and `description` are copied from frontmatter, and the Markdown body becomes `developer_instructions`. Source-only metadata such as `color`, `emoji`, `vibe`, and other unsupported frontmatter fields are omitted.
+**Codex-kompatibilitet**: Codex-anpassade agenter genereras som fristående TOML-filer. Codex-integrationen håller en minimal 1:1-mappning: `name` och `description` kopieras från frontmatter, och resten av agentens text konverteras automatiskt.
 
-### Adding a Tool Integration
+### Lägg till en verktygsintegration
 
-Want agency-agents to install into a new tool (a CLI, editor, or agent runtime)? First, **[open a Discussion](https://github.com/msitarzewski/agency-agents/discussions)** — new integration platforms are a "discuss first" change (see the PR Process below). Once there's alignment, a clean integration is small — usually **~5 files, never the converted output itself.** The just-merged Mistral Vibe integration is a good worked example to copy.
+Vill du att agency-agents ska installeras i ett nytt verktyg (ett CLI, editor eller agentruntime)? Börja med **[öppna en Diskussion](https://github.com/msitarzewski/agency-agents/discussions)** — nya integrationsplattformar behöver samordning innan implementation. 
 
-`tools.json` at the repo root is the single source of truth for the tool set, and `scripts/check-tools.sh` (CI) fails the build if any of the pieces below disagree. Run it — it names every place that must match.
+`tools.json` i repo-ts roten är den enda källan till sanning för verktygsuppsättningen, och `scripts/check-tools.sh` (CI) misslyckas om delarna nedan inte stämmer överens. Kör den — den listar alla platser där integrationer måste uppdateras.
 
-**The checklist:**
+**Checklistan:**
 
-1. **`tools.json`** — add an entry with `id`, `label`, `kebab`, `format`, `installKind`, `dest`, plus detect/version/scope and display fields. **Reuse an existing `format`** if your tool's rendered files are byte-identical to another's (e.g. tools that consume `SKILL.md` share `"format": "skill-md"` — no new renderer needed). Set `installKind` to `per-agent`, `roster`, or `plugin`. Set `icon` to `null` unless the [app](https://github.com/msitarzewski/agency-agents-app) ships a brand SVG for it.
-2. **`scripts/convert.sh`** — add a `convert_<tool>()` (or reuse a shared `format` renderer) and wire it into the tool list + `--help`.
-3. **`scripts/install.sh`** — add an `install_<tool>()` and register it in `ALL_TOOLS` + detection/labeling + `--help`.
-4. **`.gitignore`** — add a rule for your tool's generated output under `integrations/<tool>/`. **This step is required and easy to miss.** Converted agent/skill files are generated locally by `convert.sh` and are **never committed** (see "Things we'll always close" below) — only `integrations/<tool>/README.md` is tracked. Match an existing per-tool entry.
-5. **`integrations/<tool>/README.md`** — a short doc for the integration (every tool has one; it's the only committed file in the tool's directory).
-6. **Run `./scripts/check-tools.sh`** — it must pass. It cross-checks `tools.json` against `install.sh` and `convert.sh` and flags anything missing.
-7. **Run `./scripts/test-install.sh`** — it must pass. It installs into throwaway
-   sandboxes (never your real `$HOME`) and pins the installer's observable
-   contract: where files land, that `--path` beats the tool's env var, that
-   `--division` / `--agent` / `--agents-file` filter, that `--dry-run` writes
-   nothing, and that paths with spaces survive. CI runs it on Linux and macOS.
-8. **Run `./scripts/test-convert-outputs.sh`** — it must pass. It regenerates
-   every tool's output into a scratch directory and checks the *product*, not
-   the syntax: every agent's description round-trips intact, every generated
-   file parses with a real YAML/TOML parser, every tool emits exactly one output
-   per agent, and every source file parses the way the desktop app reads it.
-   When you've changed a converter on purpose it will report **manifest drift**
-   on that tool's line — that's expected. Look over what changed, run it again
-   with `--update`, and commit the refreshed `scripts/convert-outputs.sha256` so
-   reviewers can see the blast radius at a glance. The manifest holds one line
-   per agent and one per tool, and its hashes are the same on every platform
-   (forward-slash paths, LF line endings), so a Windows checkout produces the
-   same file. CI runs it on every PR.
+1. **`tools.json`** — lägg till en post med `id`, `label`, `kebab`, `format`, `installKind`, `dest`, plus detekterings-/versions-/scope-fält. **Återanvänd en befintlig `format`** om verktygets rendering passar.
+2. **`scripts/convert.sh`** — lägg till en `convert_<tool>()` (eller återanvänd en gemensam format-renderare) och koppla den till verktygslistan + `--help`.
+3. **`scripts/install.sh`** — lägg till en `install_<tool>()` och registrera den i `ALL_TOOLS` + detektering/etikettering + `--help`.
+4. **`.gitignore`** — lägg till en regel för ditt genererade utdata under `integrations/<tool>/`. **Det här steget krävs och förbises lätt.** Konverterade agent-/skillfiler genereras lokalt av användaren.
+5. **`integrations/<tool>/README.md`** — en kort dokumentation för integrationen (varje verktyg har en; det är den enda incheckade filen i katalogen).
+6. **Kör `./scripts/check-tools.sh`** — den måste passera. Den korskontrollerar `tools.json` mot `install.sh` och `convert.sh` och flaggar för allt som saknas.
+7. **Kör `./scripts/test-install.sh`** — den måste passera. Den installerar i tillfälliga sandlådor (aldrig i din riktiga `$HOME`) och låser fast installerarens observerbara kontrakt: var filer landar, att `--path` går före verktygets miljövariabel, att `--division` / `--agent` / `--agents-file`-filter fungerar, att `--dry-run` inte skriver någonting, och att banor med mellanslag fungerar. CI kör detta på Linux och macOS.
+8. **Kör `./scripts/test-convert-outputs.sh`** — den måste passera. Den regenererar varje verktygsutdata i en temporär katalog och kontrollerar produkten, inte syntaxen: varje agents beskrivning rundtrippas intakt, varje genererad fil kan analyseras med en riktig YAML/TOML-parser, varje verktyg producerar exakt en utdatafil per agent, och varje källfil analyseras på samma sätt som skrivbordsappen läser den. När du avsiktligt ändrat en converter rapporterar den **manifest drift** på den raden — det är förväntat. Granska ändringen, kör den igen med `--update` och lägg till den uppdaterade `scripts/convert-outputs.sha256` så att reviewers kan se räckvidden av ändringen. Manifestet innehåller en rad per agent och en per verktyg, och hashes är samma på alla plattformar (forward-slash, LF-radbrytningar), så en Windows-checkout ger samma fil. CI kör detta på varje PR.
 
-If your PR commits the converted output (the generated `integrations/<tool>/*` files), CI and review will ask you to remove it and add the `.gitignore` rule instead.
+Om din PR checkar in konverterad utdata (de genererade filerna under `integrations/<tool>/*`) kommer CI och review att begära att du tar bort den och lägger till `.gitignore`-regeln istället.
 
-### What Makes a Great Agent?
+### Vad gör en bra agent?
 
-**Great agents have**:
-- ✅ Narrow, deep specialization
-- ✅ Distinct personality and voice
-- ✅ Concrete code/template examples
-- ✅ Measurable success metrics
-- ✅ Step-by-step workflows
-- ✅ Real-world testing and iteration
+**Bra agenter har**:
+- ✅ Smal, djup specialisering
+- ✅ Distinkt personlighet och röst
+- ✅ Konkret kod-/mall-exempel
+- ✅ Mätbara framgångsmetoder
+- ✅ Steg-för-steg-arbetsflöden
+- ✅ Verkligt testning och iteration
 
-**Avoid**:
-- ❌ Generic "helpful assistant" personality
-- ❌ Vague "I will help you with..." descriptions
-- ❌ No code examples or deliverables
-- ❌ Overly broad scope (jack of all trades)
-- ❌ Untested theoretical approaches
+**Undvik**:
+- ❌ Generisk "hjälpsam assistent"-personlighet
+- ❌ Vaga "Jag hjälper dig med..."-beskrivningar
+- ❌ Inga kodexempel eller leveranser
+- ❌ Alltför bred omfattning (jack of all trades)
+- ❌ Otestade teoretiska tillvägagångssätt
 
 ---
 
-## 🔄 Pull Request Process
+## 🔄 Pull request-process
 
-### What Belongs in a PR (and What Doesn't)
+### Vad som hör hemma i en PR (och vad som inte gör det)
 
-The fastest path to a merged PR is **one markdown file** — a new or improved agent. That's the sweet spot.
+Den snabbaste vägen till en mergad PR är **en enda markdown-fil** — en ny eller förbättrad agent. Det är den optimala storleken.
 
-For anything beyond that, here's how we keep things smooth:
+För allt utöver det finns här hur vi håller det smidigt:
 
-#### Always welcome as a PR
-- Adding a new agent (one `.md` file)
-- Improving an existing agent's content, examples, or personality
-- Fixing typos or clarifying docs
+#### Välkommet i en PR
+- Lägg till en ny agent (en `.md`-fil)
+- Förbättra en befintlig agents innehåll, exempel eller personlighet
+- Rätta stavfel eller klargöra dokumentation
 
-#### Start a Discussion first
-- New tooling, build systems, or CI workflows
-- Architectural changes (new directories, new scripts, site generators)
-- Changes that touch many files across the repo
-- New integration formats or platforms
+#### Börja med en diskussion först
+- Ny verktyg, byggsystem eller CI-arbetsflöden
+- Arkitektoniska ändringar (nya kataloger, nya scripts, webbplatsskapare)
+- Ändringar som berör många filer i repot
+- Nya integrationsformat eller plattformar
 
-We love ambitious ideas — a [Discussion](https://github.com/msitarzewski/agency-agents/discussions) just gives the community a chance to align on approach before code gets written. It saves everyone time, especially yours.
+Vi älskar ambitiösa idéer — en [Discussion](https://github.com/msitarzewski/agency-agents/discussions) ger bara gemenskapen en chans att anpassa tillvägagångssättet innan koden skrivs. Det sparar tid och undviker onödiga konflikter.
 
-#### Things we'll always close
-- **Committed build output**: Generated files (`_site/`, compiled assets, converted agent files) should never be checked in. Users run `convert.sh` locally; its output is gitignored. When adding a new tool, adding that `.gitignore` rule is your step — see [Adding a Tool Integration](#adding-a-tool-integration).
-- **PRs that bulk-modify existing agents** without a prior discussion — even well-intentioned reformatting can create merge conflicts for other contributors.
-- **Near-duplicate "re-skins"**: New agents that are find-replace copies of an existing one (e.g. swapping a country or platform name) rather than genuinely new specialists. Run `scripts/check-agent-originality.sh` before submitting — CI runs it automatically.
+#### Saker vi alltid kommer att stänga
+- **Checkade in byggutdata**: Genererade filer (`_site/`, kompilerade tillgångar, konverterade agentfiler) ska aldrig checkas in. Användare kör `convert.sh` lokalt; dess utdata är gitignored. När du lägger till en ny integration, kör skriv genereringen lokalt och commit:a bara byggbara källfiler.
+- **PR:er som bulkändrar befintliga agenter** utan tidigare diskussion — även välmenande omformatering kan skapa merge-konflikter för andra bidragsgivare.
+- **Nästan-dubbletter i "re-skins"**: Nya agenter som är find-and-replace-kopior av en befintlig (t.ex. byta land eller plattformnamn) i stället för genuina specialister. Kör `scripts/check-agent-originality.sh` för att validera unikhet.
 
-### Before Submitting
+### Innan du skickar in
 
-1. **Test Your Agent**: Use it in real scenarios, iterate on feedback
-2. **Follow the Template**: Match the structure of existing agents
-3. **Add Examples**: Include at least 2-3 code/template examples
-4. **Define Metrics**: Include specific, measurable success criteria
-5. **Proofread**: Check for typos, formatting issues, clarity
-6. **Check it's original**: Run `./scripts/check-agent-originality.sh path/to/your-agent.md`. It compares your agent against the whole roster and flags near-duplicates (a swapped country/platform name won't fool it). A new agent should be genuinely new — if you're localizing for a market, make the platforms, tactics, and examples actually different, not a find-replace.
-7. **Check it comes through every tool intact**: Run `./scripts/test-convert-outputs.sh`. It regenerates every tool's output and confirms your agent survives each converter — description round-tripped, files parsing, nothing dropped — and that its frontmatter parses the way the desktop app reads it. Adding or editing an agent changes the generated product, so it will report **manifest drift** naming your agent — that's expected, and it is **advisory** on pull requests: CI prints it but does not fail on it. You don't need to touch `scripts/convert-outputs.sha256` at all; the maintainers regenerate it when your PR lands. (If you do run `--update`, that's fine too — the manifest has one line per agent, so it won't conflict with anyone else's PR, and the hashes are identical on Windows, macOS and Linux.)
+1. **Testa din agent**: Använd den i verkliga scenarier, iterera baserat på feedback
+2. **Följ mallen**: Matcha strukturen i befintliga agenter
+3. **Lägg till exempel**: Inkludera minst 2–3 kod-/mall-exempel
+4. **Definiera mätvärden**: Inkludera tydliga, mätbara kriterier
+5. **Läs igenom**: Kontrollera stavfel, formatering, tydlighet
+6. **Kontrollera att den är original**: Kör `./scripts/check-agent-originality.sh path/to/your-agent.md`. Den jämför din agent mot hela rostern och flaggar nästan-dubbletter (t.ex. ett bytt land/plattformsnamn snarare än en verkligt ny expertis).
+7. **Kontrollera att den fungerar i alla verktyg**: Kör `./scripts/test-convert-outputs.sh`. Den regenererar varje verktygsutdata och bekräftar att din agent överlever varje converter — beskrivningen rundtrippas intakt och varje verktygsutdata kan parsas.
 
-A word on why these checks exist. People are building genuinely remarkable things on top of these agents, and thousands rely on them every day across a dozen different tools. That's wonderful — and it means a small slip in one converter, or a stray quote in one file, quietly reaches all of them at once. Running the suite locally is how we keep that smooth for everyone downstream. It takes about a minute, and it means your work arrives exactly as you wrote it, in every tool, for everyone. Thank you for taking the extra step — it's a real kindness to people you'll never meet.
+Ett ord om varför dessa kontroller finns. Människor bygger genuint fantastiska saker ovanpå dessa agenter, och tusentals förlitar sig på dem varje dag i ett dussin olika verktyg. Det är fantastiskt — men den här skalan kräver kvalitetskontroller.
 
-### Submitting Your PR
+### Skicka in din PR
 
-1. **Fork** the repository
-2. **Create a branch**: `git checkout -b add-agent-name`
-3. **Make your changes**: Add your agent file(s)
+1. **Forka** repositoryt
+2. **Skapa en gren**: `git checkout -b add-agent-name`
+3. **Gör dina ändringar**: Lägg till din agentfil(er)
 4. **Commit**: `git commit -m "Add [Agent Name] specialist"`
 5. **Push**: `git push origin add-agent-name`
-6. **Open a Pull Request** with:
-   - Clear title: "Add [Agent Name] - [Category]"
-   - Description of what the agent does
-   - Why this agent is needed (use case)
-   - Any testing you've done
+6. **Öppna en pull request** med:
+   - Tydlig titel: "Add [Agent Name] - [Category]"
+   - Beskrivning av vad agenterna gör
+   - Varför den här agenterna behövs (användningsfall)
+   - All testning du gjort
 
-### PR Review Process
+### PR-granskningsprocess
 
-1. **Community Review**: Other contributors may provide feedback
-2. **Iteration**: Address feedback and make improvements
-3. **Approval**: Maintainers will approve when ready
-4. **Merge**: Your contribution becomes part of The Agency!
+1. **Gemenskapsgranskning**: Andra bidragsgivare kan ge feedback
+2. **Iteration**: Hantera feedback och förbättra lösningen
+3. **Godkännande**: Maintainers godkänner när det är redo
+4. **Merge**: Ditt bidrag blir en del av The Agency!
 
-### PR Template
+### PR-mall
 
 ```markdown
 ## Agent Information
@@ -364,24 +329,24 @@ A word on why these checks exist. People are building genuinely remarkable thing
 
 ---
 
-## 📐 Style Guide
+## 📐 Stilguide
 
-### Writing Style
+### Skrivstil
 
-- **Be specific**: "Reduce page load by 60%" not "Make it faster"
-- **Be concrete**: "Create React components with TypeScript" not "Build UIs"
-- **Be memorable**: Give agents personality, not generic corporate speak
-- **Be practical**: Include real code, not pseudo-code
+- **Var specifik**: "Minska sidladdning med 60 %" istället för "Gör det snabbare"
+- **Var konkret**: "Skapa React-komponenter med TypeScript" istället för "Bygg UI"
+- **Var minnesvärd**: Ge agenter personlighet, inte generisk företagsjargong
+- **Var praktisk**: Inkludera riktig kod, inte pseudokod
 
-### Formatting
+### Formatering
 
-- Use **Markdown formatting** consistently
-- Include **emojis** for section headers (makes scanning easier)
-- Use **code blocks** for all code examples with proper syntax highlighting
-- Use **tables** for comparing options or showing metrics
-- Use **bold** for emphasis, `code` for technical terms
+- Använd **Markdown-formatering** konsekvent
+- Inkludera **emojis** i sektionstitlar (gör det lättare att skanna)
+- Använd **kodblock** för alla kodexempel med korrekt syntaxmarkering
+- Använd **tabeller** för att jämföra alternativ eller visa mätvärden
+- Använd **fet stil** för betoning, `code` för tekniska termer
 
-### Code Examples
+### Kodexempel
 
 ```markdown
 ## Example Code Block
@@ -401,73 +366,74 @@ interface AgentExample {
 \`\`\`
 ```
 
-### Tone
+### Ton
 
-- **Professional but approachable**: Not overly formal or casual
-- **Confident but not arrogant**: "Here's the best approach" not "Maybe you could try..."
-- **Helpful but not hand-holding**: Assume competence, provide depth
-- **Personality-driven**: Each agent should have a unique voice
-
----
-
-## 🌟 Recognition
-
-Contributors who make significant contributions will be:
-
-- Listed in the README acknowledgments section
-- Highlighted in release notes
-- Featured in "Agent of the Week" showcases (if applicable)
-- Given credit in the agent file itself
+- **Professionell men tillgänglig**: Inte alltför formell eller lättsam
+- **Självsäker men inte arrogant**: "Här är det bästa tillvägagångssättet" istället för "Kanske du kan prova..."
+- **Hjälpsam men inte handhållande**: Anta kompetens, ge djup
+- **Personlighetsdriven**: Varje agent ska ha sin egen röst
 
 ---
 
-## 🤔 Questions?
+## 🌟 Erkännande
 
-- **General Questions**: [GitHub Discussions](https://github.com/msitarzewski/agency-agents/discussions)
-- **Bug Reports**: [GitHub Issues](https://github.com/msitarzewski/agency-agents/issues)
-- **Feature Requests**: [GitHub Issues](https://github.com/msitarzewski/agency-agents/issues)
-- **Community Chat**: [Join our discussions](https://github.com/msitarzewski/agency-agents/discussions)
+Bidragsgivare som gör betydande insatser kommer att:
 
----
-
-## 📚 Resources
-
-### For New Contributors
-
-- [README.md](README.md) - Overview and agent catalog
-- [Example: Frontend Developer](engineering/engineering-frontend-developer.md) - Well-structured agent example
-- [Example: Reddit Community Builder](marketing/marketing-reddit-community-builder.md) - Great personality example
-- [Example: Whimsy Injector](design/design-whimsy-injector.md) - Creative specialist example
-
-### For Agent Design
-
-- Read existing agents for inspiration
-- Study the patterns that work well
-- Test your agents in real scenarios
-- Iterate based on feedback
+- Listas i README:s tacksektion
+- Lyftas i release notes
+- Presenteras i "Agent of the Week"-presentationer (om tillämpligt)
+- Få kredit i agentfilen själv
 
 ---
 
-## 🎉 Thank You!
+## 🤔 Frågor?
 
-Your contributions make The Agency better for everyone. Whether you're:
+- **Allmänna frågor**: [GitHub Discussions](https://github.com/msitarzewski/agency-agents/discussions)
+- **Buggarapporter**: [GitHub Issues](https://github.com/msitarzewski/agency-agents/issues)
+- **Funktionsförfrågningar**: [GitHub Issues](https://github.com/msitarzewski/agency-agents/issues)
+- **Gemenskapschatt**: [Gå med i diskussionerna](https://github.com/msitarzewski/agency-agents/discussions)
 
-- Adding a new agent
-- Improving documentation
-- Fixing bugs
-- Sharing success stories
-- Helping other contributors
+---
 
-**You're making a difference. Thank you!**
+## 📚 Resurser
+
+### För nya bidragsgivare
+
+- [README.md](README.md) - Översikt och agentkatalog
+- [Exempel: Frontend Developer](engineering/engineering-frontend-developer.md) - Välstrukturerat agentexempel
+- [Exempel: Reddit Community Builder](marketing/marketing-reddit-community-builder.md) - Bra personlighetsexempel
+- [Exempel: Whimsy Injector](design/design-whimsy-injector.md) - Kreativt specialisterexempel
+
+### För agentdesign
+
+- Läs befintliga agenter för inspiration
+- Studera de mönster som fungerar
+- Testa dina agenter i verkliga scenarier
+- Iterera baserat på feedback
+
+---
+
+## 🎉 Tack!
+
+Dina bidrag gör The Agency bättre för alla. Oavsett om du:
+
+- Lägger till en ny agent
+- Förbättrar dokumentation
+- Rättar buggar
+- Dela framgångshistorier
+- Hjälper andra bidragsgivare
+
+**Du gör skillnad. Tack!**
 
 ---
 
 <div align="center">
 
-**Questions? Ideas? Feedback?**
+**Frågor? Idéer? Feedback?**
 
-[Open an Issue](https://github.com/msitarzewski/agency-agents/issues) • [Start a Discussion](https://github.com/msitarzewski/agency-agents/discussions) • [Submit a PR](https://github.com/msitarzewski/agency-agents/pulls)
+[Öppna ett ärende](https://github.com/msitarzewski/agency-agents/issues) • [Starta en diskussion](https://github.com/msitarzewski/agency-agents/discussions) • [Skicka in en PR](https://github.com/msitarzewski/agency-agents/pulls)
 
-Made with ❤️ by the community
+Gjord med ❤️ av gemenskapen
 
 </div>
+
